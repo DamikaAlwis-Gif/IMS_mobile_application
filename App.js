@@ -1,12 +1,79 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+//import { createDrawerNavigator } from "@react-navigation/drawer";
+import HomeStack from './routes/HomeStack';
+import AboutStack from './routes/AboutStack';
+//import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+
+import ReservationsStack from './routes/ReservationsStack';
+import Login from './components/Login';
+import TabNavigation from './routes/TabNavigation';
+import LoadingScreen from './components/LoadingScreen';
 export default function App() {
+ 
+  //const Drawer = createDrawerNavigator();
+  //const Tab = createMaterialBottomTabNavigator();
+  const Stack = createNativeStackNavigator();
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    //<Login/>
+
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="loadingScreen" component={LoadingScreen} />
+        <Stack.Screen
+          name="Login"
+          // options={{ headerShown: false }}
+          component={Login}
+        />
+        <Stack.Screen
+          name="TabNavigation"
+          options={{ headerShown: false }}
+          component={TabNavigation}
+        />
+      </Stack.Navigator>
+
+      {/* <Tab.Navigator initialRouteName="HomeStack">
+        <Tab.Screen
+          name="HomeStack"
+          options={{
+            headerShown: false,
+            tabBarLabel: "Home",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="home" color={color} size={26} />
+            ),
+          }}
+          component={HomeStack}
+        />
+        <Tab.Screen
+          name="AboutStack"
+          options={{
+            headerShown: false,
+            tabBarLabel: "account",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="account" color={color} size={26} />
+            ),
+          }}
+          component={AboutStack}
+        />
+        <Tab.Screen
+          name="ReservationsStack"
+          options={{
+            headerShown: false,
+            tabBarLabel: "account",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="account" color={color} size={26} />
+            ),
+          }}
+          component={ReservationsStack}
+        />
+        
+      </Tab.Navigator> */}
+    </NavigationContainer>
   );
 }
 
@@ -14,7 +81,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+ 
   },
 });
