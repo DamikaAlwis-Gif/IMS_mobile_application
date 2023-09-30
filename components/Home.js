@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import jwtDecode from "jwt-decode";
-
+import CustomButton from "./CustomButton";
 
 const Home = ({ navigation }) => {
   const [name, setName] = useState("");
@@ -43,12 +43,10 @@ const Home = ({ navigation }) => {
       <Text style={{}}>Home Screen</Text>
       <Text style={{}}>Welcome {name} {role}</Text>
       <View>
-        <Button mode="contained" onPress={() => pressHandler()}>
-          Resource page
-        </Button>
-        <Button mode="contained" onPress={() => handleLogOUt()}>
-          Log out
-        </Button>
+        
+        <CustomButton text="RESOURCES" onPress={pressHandler} />
+        
+        <CustomButton text="LOG OUT" onPress={handleLogOUt} />
       </View>
     </View>
   );

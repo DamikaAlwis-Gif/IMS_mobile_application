@@ -7,7 +7,7 @@ import HomeStack from './routes/HomeStack';
 import AboutStack from './routes/AboutStack';
 //import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-
+import globalStyles from './components/styles/globalStyles';
 import ReservationsStack from './routes/ReservationsStack';
 import Login from './components/Login';
 import TabNavigation from './routes/TabNavigation';
@@ -24,10 +24,12 @@ export default function App() {
 
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="loadingScreen" component={LoadingScreen} />
+        <Stack.Screen name="loadingScreen" options={{
+          headerShown: false,
+        }} component={LoadingScreen} />
         <Stack.Screen
           name="Login"
-          // options={{ headerShown: false }}
+          options={{...globalStyles.headerMain , headerTitle: "LOGIN"}}
           component={Login}
         />
         <Stack.Screen
