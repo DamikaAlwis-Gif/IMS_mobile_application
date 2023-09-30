@@ -3,6 +3,7 @@ import { View , StyleSheet} from 'react-native'
 import { Button } from 'react-native-paper';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Text } from 'react-native-paper';
+import CustomButton from './CustomButton';
 
 const LoadingScreen = ({navigation}) => {
     const handleProceed = async() => {
@@ -16,12 +17,9 @@ const LoadingScreen = ({navigation}) => {
     };
   return (
     <View  style ={styles.container}>
-        <Button 
-        mode='contained'
-        onPress={() => handleProceed()}>
-     <Text>Proceed</Text>
+      <Text style={{fontSize: 40, fontWeight:"bold", alignSelf:"center"}}>Welcome</Text>
+        <CustomButton text="PROCEED" onPress={handleProceed} />
 
-        </Button>
 
 
     </View>

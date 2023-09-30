@@ -5,6 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import url from './url';
+import CustomButton from './CustomButton';
 
 const Login = ({navigation}) => {
     const [username, setName] = useState("");
@@ -47,9 +48,10 @@ const Login = ({navigation}) => {
           paddingTop: 20,
           paddingHorizontal: 10,
           justifyContent: "center",
+          flex: 1,
         }}
       >
-        <Text
+        {/* <Text
           style={{
             alignSelf: "center",
             fontSize: 40,
@@ -58,7 +60,7 @@ const Login = ({navigation}) => {
           }}
         >
           Login
-        </Text>
+        </Text> */}
         <View style={{ marginTop: 20 }}>
           <TextInput
             label="User name"
@@ -81,7 +83,7 @@ const Login = ({navigation}) => {
             value={password}
             onChangeText={(text) => setPassword(text)}
           />
-          <Button
+          {/* <Button
             // style={{ marginTop: 20 , height: 50}}
             style={{ marginTop: 20 }}
             icon="login"
@@ -89,7 +91,8 @@ const Login = ({navigation}) => {
             onPress={() => handleSubmit()}
           >
             <Text style={{ color: "white", fontSize: 20 }}>Login</Text>
-          </Button>
+          </Button> */}
+          <CustomButton text="LOGIN" onPress={handleSubmit}/>
         </View>
       </View>
     </View>
