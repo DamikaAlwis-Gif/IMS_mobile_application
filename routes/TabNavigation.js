@@ -2,7 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import HomeStack from './HomeStack';
-import AboutStack from './AboutStack';
+import AccountStack from "./AccountStack";
 import ReservationsStack from './ReservationsStack';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -23,23 +23,23 @@ const TabNavigation = () => {
         component={HomeStack}
       />
       <Tab.Screen
-        name="AboutStack"
+        name="AccountStack"
         options={{
           headerShown: false,
-          tabBarLabel: "account",
+          tabBarLabel: "Account",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
         }}
-        component={AboutStack}
+        component={AccountStack}
       />
       <Tab.Screen
         name="ReservationsStack"
         options={{
           headerShown: false,
-          tabBarLabel: "account",
+          tabBarLabel: "Reservations",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account" color={color} size={26} />
+            <MaterialCommunityIcons name="bell" color={color} size={26} />
           ),
         }}
         component={ReservationsStack}

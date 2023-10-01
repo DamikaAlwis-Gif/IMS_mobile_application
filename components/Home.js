@@ -12,18 +12,7 @@ const Home = ({ navigation }) => {
     navigation.navigate("Resource");
   };
 
-  const handleLogOUt = async() => {
-    try {
-      await AsyncStorage.removeItem("token");
-      console.log("Token Removed");
-    }
-    catch(error){
-      console.log(error);
-    }
-    finally{
-       navigation.navigate("loadingScreen");
-    }
-};
+  
   useEffect (() => {
     const checkToken = async () => {
       const token = await AsyncStorage.getItem("token");
@@ -40,13 +29,12 @@ const Home = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{}}>Home Screen</Text>
-      <Text style={{}}>Welcome {name} {role}</Text>
+      
       <View>
         
         <CustomButton text="RESOURCES" onPress={pressHandler} />
         
-        <CustomButton text="LOG OUT" onPress={handleLogOUt} />
+        {/* <CustomButton text="LOG OUT" onPress={handleLogOUt} /> */}
       </View>
     </View>
   );
