@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { View, FlatList, ScrollView, Image } from 'react-native';
-import { DataTable, Text , Button} from "react-native-paper";
+import {  Text , Button} from "react-native-paper";
 import axios from 'axios';
 import url from "./url";
 import globalStyles from './styles/globalStyles';

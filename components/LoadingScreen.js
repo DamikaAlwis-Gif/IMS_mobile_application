@@ -5,6 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Text } from 'react-native-paper';
 import CustomButton from './CustomButton';
 
+
 const LoadingScreen = ({navigation}) => {
     const handleProceed = async() => {
         const token = await AsyncStorage.getItem("token");
@@ -16,19 +17,49 @@ const LoadingScreen = ({navigation}) => {
         
     };
   return (
-    <View  style ={styles.container}>
-      <Text style={{fontSize: 40, fontWeight:"bold", alignSelf:"center"}}>Welcome</Text>
-        <CustomButton text="PROCEED" onPress={handleProceed} />
+    <View style={styles.container}>
+      <Text
+        style={{
+          fontSize: 30,
+          fontWeight: "bold",
+          alignSelf: "center",
+          color: "#8688BC",
+        }}
+      >
+        WISDOM EDUCATION
+      </Text>
+      <Text
+        style={{
+          fontSize: 30,
+          fontWeight: "bold",
+          alignSelf: "center",
+          color: "#8688BC",
+          marginBottom: 20,
+        }}
+      >
+        LABORATORIES
+      </Text>
+      <Text
+        style={{
+          fontSize: 15,
+          fontWeight: "bold",
+          alignSelf: "center",
+          color: "#8688BC",
+          marginBottom: 20,
+          fontFamily: "sans-serif",
+        }}
+      >
+        Inventory Management System
+      </Text>
 
-
-
+      <CustomButton text="PROCEED" onPress={handleProceed} />
     </View>
-  )
+  );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#F5F5F5",
     padding: 20,
     justifyContent: "center",
   },

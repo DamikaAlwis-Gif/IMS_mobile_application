@@ -30,7 +30,6 @@ const globalStyles = StyleSheet.create({
     // ),
   },
   header: {
-   
     headerTitleAlign: "center",
     headerTintColor: "white",
     headerTitleStyle: {
@@ -49,6 +48,30 @@ const globalStyles = StyleSheet.create({
     //     color="#fff"
     //   />
     // ),
+  },
+  card: {
+    padding: 4,
+    backgroundColor: "#D8D8D8",
+    marginTop: 10,
+    borderRadius: 10,
+    elevation: 7,
+  },
+
+  titleText: {
+    fontSize: 18,
+    //fontWeight: "bold",
+    //color: "#333",
+    alignSelf: "center",
+    color: "white",
+    marginBottom: 5,
+  },
+  cardContent: {
+    backgroundColor: "#8688BC",
+    borderRadius: 10,
+    padding: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+
   },
 });
 

@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeStack from './routes/HomeStack';
-import AboutStack from './routes/AboutStack';
+import AboutStack from "./routes/AccountStack";
 //import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import globalStyles from './components/styles/globalStyles';
@@ -24,12 +24,20 @@ export default function App() {
 
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="loadingScreen" options={{
-          headerShown: false,
-        }} component={LoadingScreen} />
+        <Stack.Screen
+          name="loadingScreen"
+          options={{
+            headerShown: false,
+          }}
+          component={LoadingScreen}
+        />
         <Stack.Screen
           name="Login"
-          options={{...globalStyles.headerMain , headerTitle: "LOGIN"}}
+          options={{
+            ...globalStyles.headerMain,
+            headerTitle: "LOGIN",
+            headerShown: false,
+          }}
           component={Login}
         />
         <Stack.Screen

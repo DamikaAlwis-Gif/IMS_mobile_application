@@ -67,13 +67,19 @@ const Resource = ({ navigation }) => {
   };
   const formatAvailability = (availability) => {
     if (availability === "Available") {
-      return <Text style={{ color: "green" }}>Available</Text>;
+      return <Text style={{ color: "green", fontWeight:"bold" }}>Available</Text>;
     } else if (availability === "Checked out") {
-      return <Text style={{ color: "red" }}>Checked out</Text>;
+      return (
+        <Text style={{ color: "red", fontWeight: "bold" }}>Checked out</Text>
+      );
     } else if (availability === "Under maintenance") {
-      return <Text style={{ color: "orange" }}>Maintenance</Text>;
+      return (
+        <Text style={{ color: "orange", fontWeight: "bold" }}>Maintenance</Text>
+      );
     } else {
-      return <Text style={{ color: "red" }}>{availability}</Text>;
+      return (
+        <Text style={{ color: "red", fontWeight: "bold" }}>{availability}</Text>
+      );
     }
   };
 
@@ -130,7 +136,8 @@ const Resource = ({ navigation }) => {
 
                 <DataTable.Cell style={{ flex: 2 }}>{item.name}</DataTable.Cell>
                 <DataTable.Cell numeric>
-                  {formatAvailability(item.availability)}
+                  <Text style ={{
+                  }}>{formatAvailability(item.availability)}</Text>
                 </DataTable.Cell>
               </DataTable.Row>
             </TouchableOpacity>
