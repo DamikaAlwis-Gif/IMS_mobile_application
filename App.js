@@ -12,6 +12,8 @@ import ReservationsStack from './routes/ReservationsStack';
 import Login from './components/Login';
 import TabNavigation from './routes/TabNavigation';
 import LoadingScreen from './components/LoadingScreen';
+import { Provider } from 'react-native-paper';
+
 export default function App() {
  
   //const Drawer = createDrawerNavigator();
@@ -21,33 +23,34 @@ export default function App() {
 
   return (
     //<Login/>
+    <Provider>
+      
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="loadingScreen"
+            options={{
+              headerShown: false,
+            }}
+            component={LoadingScreen}
+          />
+          <Stack.Screen
+            name="Login"
+            options={{
+              ...globalStyles.headerMain,
+              headerTitle: "LOGIN",
+              headerShown: false,
+            }}
+            component={Login}
+          />
+          <Stack.Screen
+            name="TabNavigation"
+            options={{ headerShown: false }}
+            component={TabNavigation}
+          />
+        </Stack.Navigator>
 
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="loadingScreen"
-          options={{
-            headerShown: false,
-          }}
-          component={LoadingScreen}
-        />
-        <Stack.Screen
-          name="Login"
-          options={{
-            ...globalStyles.headerMain,
-            headerTitle: "LOGIN",
-            headerShown: false,
-          }}
-          component={Login}
-        />
-        <Stack.Screen
-          name="TabNavigation"
-          options={{ headerShown: false }}
-          component={TabNavigation}
-        />
-      </Stack.Navigator>
-
-      {/* <Tab.Navigator initialRouteName="HomeStack">
+        {/* <Tab.Navigator initialRouteName="HomeStack">
         <Tab.Screen
           name="HomeStack"
           options={{
@@ -83,7 +86,8 @@ export default function App() {
         />
         
       </Tab.Navigator> */}
-    </NavigationContainer>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

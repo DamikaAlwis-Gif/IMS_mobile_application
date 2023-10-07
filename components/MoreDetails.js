@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { View, FlatList, ScrollView, Image } from 'react-native';
-import {  Text , Button} from "react-native-paper";
+import { View, ScrollView, Image } from 'react-native';
+import { Text, ActivityIndicator } from "react-native-paper";
 import axios from 'axios';
 import url from "./url";
 import globalStyles from './styles/globalStyles';
@@ -35,53 +35,79 @@ const MoreDetails = ({route, navigation}) => {
   return (
     <ScrollView>
       <View style={globalStyles.container}>
-        <View
-          style={{
-            padding: 4,
-            backgroundColor: "#D8D8D8",
-            marginTop: 10,
-            borderRadius: 10,
-            elevation: 7,
-          }}
-        >
-          <Image
-            source={{ uri: details.img_url }}
-            style={{ width: 300, height: 200, alignSelf: "center", margin: 10 }}
-          ></Image>
-          <View style={{ marginTop: 20 }}>
-            {Object.keys(details).map((key) => {
-              if (key === "img_url") {
-                return null;
-              }
-              return (
-                <View
-                  key={key}
-                  style={{
-                    padding: 5,
-                    backgroundColor: "#8688BC",
-                    borderColor: "black",
-                    borderRadius: 10,
-                    margin: 3,
-                  }}
-                >
-                  <Text
-                    variant="titleSmall"
-                    style={{ textAlign: "center", color: "white" }}
-                  >
-                    {formatText(key) + " : " + details[key]}
-                  </Text>
-                </View>
-              );
-            })}
-          </View>
-        </View>
+        {loaded ? (
+          <View>
+            <View
+              style={{
+                padding: 4,
+                backgroundColor: "#D8D8D8",
+                marginTop: 10,
+                borderRadius: 10,
+                elevation: 7,
+              }}
+            >
+              <Image
+                source={{ uri: details.img_url }}
+                style={{
+                  width: 300,
+                  height: 200,
+                  alignSelf: "center",
+                  margin: 10,
+                }}
+              ></Image>
+              <View style={{ marginTop: 20 }}>
+                {Object.keys(details).map((key) => {
+                  if (key === "img_url") {
+                    return null;
+                  }
+                  return (
+                    <View
+                      key={key}
+                      style={{
+                        padding: 5,
+                        backgroundColor: "#8688BC",
+                        borderColor: "black",
+                        borderRadius: 10,
+                        margin: 3,
+                      }}
+                    >
+                      <Text
+                        variant="titleSmall"
+                        style={{ textAlign: "center", color: "white" }}
+                      >
+                        {formatText(key) + " : " + details[key]}
+                      </Text>
+                    </View>
+                  );
+                })}
+              </View>
+            </View>
 
-        <View style={{ maxWidth: "", marginTop: 20 }}>
-          {/* <Button mode="contained" onPress={() => console.log("Pressed")}>
+            <View style={{ maxWidth: "", marginTop: 20 }}>
+              {/* <Button mode="contained" onPress={() => console.log("Pressed")}>
           Reserve
         </Button> */}
-          <CustomButton text="RESERVE" onPress={() => console.log("Pressed")} />
-        </View>
+              <CustomButton
+                text="RESERVE"
+                onPress={() => console.log("Pressed")}
+              />
+            </View>
+          </View>
+        ) : (
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ActivityIndicator
+              animating={true}
+              //color={MD2Colors.red800}
+              size="large"
+            />
+          </View>
+        )}
       </View>
     </ScrollView>
   );

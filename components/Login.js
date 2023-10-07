@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import { Button, TextInput } from "react-native-paper";
 import { useState } from 'react';
 import axios from 'axios';
@@ -36,52 +36,56 @@ const Login = ({navigation}) => {
     
     
   return (
-    <View style={styles.container}>
-      <Text
-        style={{
-          fontSize: 30,
-          fontWeight: "bold",
-          alignSelf: "center",
-          color: "#8688BC",
-        }}
-      >
-        WISDOM EDUCATION
-      </Text>
-      <Text
-        style={{
-          fontSize: 30,
-          fontWeight: "bold",
-          alignSelf: "center",
-          color: "#8688BC",
-          marginBottom: 20,
-        }}
-      >
-        LABORATORIES
-      </Text>
+    <ImageBackground source={require("./images/bg1.jpg") } style={{
+      flex: 1,
+      justifyContent: "center"
+    }}>
+      <View style={styles.container}>
+        <Text
+          style={{
+            fontSize: 30,
+            fontWeight: "bold",
+            alignSelf: "center",
+            color: "#8688BC",
+          }}
+        >
+          WISDOM EDUCATION
+        </Text>
+        <Text
+          style={{
+            fontSize: 30,
+            fontWeight: "bold",
+            alignSelf: "center",
+            color: "#8688BC",
+            marginBottom: 20,
+          }}
+        >
+          LABORATORIES
+        </Text>
 
-      <View style={{ marginTop: 20 }}>
-        <TextInput
-          label="User name"
-          value={username}
-          mode="outlined"
-          onChangeText={(text) => setName(text)}
-        />
-      </View>
-      <View style={{ marginTop: 20 }}>
-        <TextInput
-          label="Pass word"
-          mode="outlined"
-          secureTextEntry={passwordVisible}
-          right={
-            <TextInput.Icon
-              icon="eye"
-              onPress={() => setPasswordVisible(!passwordVisible)}
-            />
-          }
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-        />
-        {/* <Button
+        <View style={{ marginTop: 20 }}>
+          <TextInput
+            label="User name"
+            value={username}
+            mode="outlined"
+            onChangeText={(text) => setName(text)}
+          />
+        </View>
+        <View style={{ marginTop: 20 }}>
+          <TextInput
+            label="Pass word"
+            mode="outlined"
+            secureTextEntry={passwordVisible}
+            right={
+              <TextInput.Icon
+                icon="eye"
+                onPress={() => setPasswordVisible(!passwordVisible)}
+              />
+            }
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
+          {/* <Button
             // style={{ marginTop: 20 , height: 50}}
             style={{ marginTop: 20 }}
             icon="login"
@@ -90,15 +94,16 @@ const Login = ({navigation}) => {
           >
             <Text style={{ color: "white", fontSize: 20 }}>Login</Text>
           </Button> */}
-        <CustomButton text="LOGIN" onPress={handleSubmit} />
+          <CustomButton text="LOGIN" onPress={handleSubmit} />
+        </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5F5F5",
+   // backgroundColor: "#F5F5F5",
     padding: 20,
     justifyContent: "center",
   },
