@@ -65,6 +65,13 @@ const globalStyles = StyleSheet.create({
     color: "white",
     marginBottom: 5,
   },
+  cardText:{
+    fontSize: 15,
+    
+    color: "white",
+    
+  },
+
   cardContent: {
     backgroundColor: "#8688BC",
     borderRadius: 10,
