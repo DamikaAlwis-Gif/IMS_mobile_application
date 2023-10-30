@@ -3,13 +3,11 @@
 Welcome to the Wisdom Education Inventory Management System mobile application repository. This mobile app is designed for general users, including students and academic staff members, to easily manage and access resources available in the computer labs at Wisdom Education Institute. The app is developed using the React Native framework for a seamless cross-platform experience.
 
 ## Table of Contents
-[Introduction](#introduction)
+- [Introduction](#introduction)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -31,7 +29,9 @@ This mobile application provides a user-friendly interface for accessing and man
 To get started with this mobile application, follow these steps:
 
 1. **Clone the Repository**:
-   
+   ```
+   hello
+   ```
 
 2. **Install Dependencies**:
    ```sh
