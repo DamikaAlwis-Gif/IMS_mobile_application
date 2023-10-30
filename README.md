@@ -57,6 +57,20 @@ To get started with this mobile application, follow these steps:
 7. **Log Out**: Log out of the application.
 
 ## Screenshots
+![WhatsApp Image 2023-10-30 at 11 46 23_0e615653](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/ea6e9c2e-f3e5-4d7e-8da2-af0389da7429)
+![WhatsApp Image 2023-10-30 at 11 46 23_b16aa6e1](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/dda4a03c-5664-4507-8dfd-3ba085cd833b)
+![WhatsApp Image 2023-10-30 at 11 46 26_4fd1fc32](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/1d6ebdeb-d309-4194-bfcf-4fd4e0175975)
+
+![WhatsApp Image 2023-10-30 at 11 46 26_ca716dfe](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/8dc0dba0-af9f-490a-8fd6-4e395af62909)
+
+![WhatsApp Image 2023-10-30 at 11 46 26_ca716dfe](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/c06c6aac-4c67-4088-9ca8-a352d0743915)
+
+
+![WhatsApp Image 2023-10-30 at 11 46 24_6d9d570d](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/204508a1-82e0-4e5a-8d80-e1b866b313db)
+
+![WhatsApp Image 2023-10-30 at 11 46 25_de3fd985](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/be7c28d2-52b3-4b6a-92c2-f0082af76e50)
+
+![WhatsApp Image 2023-10-30 at 11 46 24_225e20a1](https://github.com/DamikaAlwis-Gif/IMS_mobile_application/assets/116697304/654fce64-1eab-463b-846d-0697717efd5d)
 
 
 
