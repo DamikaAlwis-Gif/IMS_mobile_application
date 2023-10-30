@@ -11,7 +11,7 @@ const HomeStack = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Home"
-      options={{ ...globalStyles.headerMain , headerTitle: "HOME"}}
+      options={{ ...globalStyles.headerMain , headerTitle: "WISDOM EDUCATION"}}
         component={Home}
       />
       <Stack.Screen

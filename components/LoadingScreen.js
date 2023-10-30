@@ -30,7 +30,7 @@ const LoadingScreen = ({navigation}) => {
             fontSize: 30,
             fontWeight: "bold",
             alignSelf: "center",
-            color: "#8688BC",
+            color: "#8A2BE2",
           }}
         >
           WISDOM EDUCATION
@@ -40,7 +40,7 @@ const LoadingScreen = ({navigation}) => {
             fontSize: 30,
             fontWeight: "bold",
             alignSelf: "center",
-            color: "#8688BC",
+            color: "#8A2BE2",
             marginBottom: 20,
           }}
         >

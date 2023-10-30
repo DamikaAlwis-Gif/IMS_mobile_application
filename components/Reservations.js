@@ -8,6 +8,7 @@ import url from './url';
 import { formatDate } from './utils/formatDate';
 
 const Reservations = () => {
+
   const [id, setID] = useState("");
   const [details , setDetails] = useState([]);
  const [IDLoaded, setIDLoaded] = useState(false);
@@ -34,22 +35,23 @@ const Reservations = () => {
       const res = await axios.get(url1);
       setDetails(res.data.data);
       setLoaded(true);
-      console.log(res.data.data);
+      
+      // console.log(res.data.data);
     } catch (error) {
       console.log(error);
       
     }
   };
   useEffect(() => {
-    if(id !==""){
+   
        fetchDetails();
-    }
+    
    
   }, [IDLoaded]);
 
   return (
     <View style={globalStyles.container}>
-      {loaded && details.length > 0 ? (
+      {details.length > 0 ? (
         <ScrollView>
           {details.map((item) => {
             return (
@@ -59,6 +61,7 @@ const Reservations = () => {
                   ...globalStyles.cardContent,
                   marginTop: 10,
                   backgroundColor: "#9966CC",
+                  
                 }}
               >
                 <Text style={globalStyles.cardText}>
@@ -78,7 +81,10 @@ const Reservations = () => {
           })}
         </ScrollView>
       ) : (
-        <Text style={globalStyles.titleText}>No Reservations</Text>
+        <View>
+         
+          <Text style={{ ...globalStyles.titleText ,color: "black" , fontSize: 25}}> No Reservations</Text>
+        </View>
       )}
     </View>
   );
