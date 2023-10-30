@@ -1,5 +1,6 @@
 
 import {StyleSheet} from 'react-native';
+
 const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -65,11 +66,10 @@ const globalStyles = StyleSheet.create({
     color: "white",
     marginBottom: 5,
   },
-  cardText:{
+  cardText: {
     fontSize: 15,
-    
+    fontWeight: "bold",
     color: "white",
-    
   },
 
   cardContent: {
@@ -78,7 +78,11 @@ const globalStyles = StyleSheet.create({
     padding: 5,
     paddingHorizontal: 10,
     paddingVertical: 20,
-
+    elevation: 5,
+    // borderBottomColor: "black",
+    // borderBottomWidth: 1,
+    borderWidth: 1,
+    
   },
 });
 

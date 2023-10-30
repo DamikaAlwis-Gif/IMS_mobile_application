@@ -20,7 +20,7 @@ const Login = ({navigation}) => {
       };
       try {
         const res = await axios.post(url1, data);
-        console.log(res.data);
+        // console.log(res.data);
         if (res.data.status === "ok") {
           AsyncStorage.setItem("token", res.data.token);
           navigation.navigate("TabNavigation");
@@ -36,17 +36,20 @@ const Login = ({navigation}) => {
     
     
   return (
-    <ImageBackground source={require("./images/bg1.jpg") } style={{
-      flex: 1,
-      justifyContent: "center"
-    }}>
+    <ImageBackground
+      source={require("./images/bg1.jpg")}
+      style={{
+        flex: 1,
+        justifyContent: "center",
+      }}
+    >
       <View style={styles.container}>
         <Text
           style={{
             fontSize: 30,
             fontWeight: "bold",
             alignSelf: "center",
-            color: "#8688BC",
+            color: "#8A2BE2",
           }}
         >
           WISDOM EDUCATION
@@ -56,7 +59,7 @@ const Login = ({navigation}) => {
             fontSize: 30,
             fontWeight: "bold",
             alignSelf: "center",
-            color: "#8688BC",
+            color: "#8A2BE2",
             marginBottom: 20,
           }}
         >
@@ -65,7 +68,7 @@ const Login = ({navigation}) => {
 
         <View style={{ marginTop: 20 }}>
           <TextInput
-            label="User name"
+            label="Username"
             value={username}
             mode="outlined"
             onChangeText={(text) => setName(text)}
@@ -73,7 +76,7 @@ const Login = ({navigation}) => {
         </View>
         <View style={{ marginTop: 20 }}>
           <TextInput
-            label="Pass word"
+            label="Password"
             mode="outlined"
             secureTextEntry={passwordVisible}
             right={
@@ -85,15 +88,7 @@ const Login = ({navigation}) => {
             value={password}
             onChangeText={(text) => setPassword(text)}
           />
-          {/* <Button
-            // style={{ marginTop: 20 , height: 50}}
-            style={{ marginTop: 20 }}
-            icon="login"
-            mode="contained"
-            onPress={() => handleSubmit()}
-          >
-            <Text style={{ color: "white", fontSize: 20 }}>Login</Text>
-          </Button> */}
+          
           <CustomButton text="LOGIN" onPress={handleSubmit} />
         </View>
       </View>

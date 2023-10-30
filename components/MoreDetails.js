@@ -83,15 +83,7 @@ const MoreDetails = ({route, navigation}) => {
               </View>
             </View>
 
-            <View style={{ maxWidth: "", marginTop: 20 }}>
-              {/* <Button mode="contained" onPress={() => console.log("Pressed")}>
-          Reserve
-        </Button> */}
-              <CustomButton
-                text="RESERVE"
-                onPress={() => console.log("Pressed")}
-              />
-            </View>
+            
           </View>
         ) : (
           <View

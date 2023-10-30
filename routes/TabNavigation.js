@@ -5,6 +5,7 @@ import HomeStack from './HomeStack';
 import AccountStack from "./AccountStack";
 import ReservationsStack from './ReservationsStack';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import CheckOutsStack from './CheckoutsStack';
 
 const TabNavigation = () => {
   const Tab = createMaterialBottomTabNavigator();
@@ -22,6 +23,29 @@ const TabNavigation = () => {
         }}
         component={HomeStack}
       />
+
+      <Tab.Screen
+        name="ReservationsStack"
+        options={{
+          headerShown: false,
+          tabBarLabel: "Reservations",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="clipboard" color={color} size={26} />
+          ),
+        }}
+        component={ReservationsStack}
+      />
+      <Tab.Screen
+        name="CheckOutsStack"
+        options={{
+          headerShown: false,
+          tabBarLabel: "Check Outs",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="clipboard" color={color} size={26} />
+          ),
+        }}
+        component={CheckOutsStack}
+      />
       <Tab.Screen
         name="AccountStack"
         options={{
@@ -32,17 +56,6 @@ const TabNavigation = () => {
           ),
         }}
         component={AccountStack}
-      />
-      <Tab.Screen
-        name="ReservationsStack"
-        options={{
-          headerShown: false,
-          tabBarLabel: "Reservations",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
-          ),
-        }}
-        component={ReservationsStack}
       />
     </Tab.Navigator>
   );

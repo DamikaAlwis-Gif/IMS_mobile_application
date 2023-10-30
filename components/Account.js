@@ -64,18 +64,17 @@ const Account = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={{ ...globalStyles.card, padding: 10 }}>
-        <Image
-          source={userImage}
-          style={{
-            width: 150,
-            height: 150,
-            alignSelf: "center",
-            margin: 10,
-            borderRadius: 100,
-          }}
-        ></Image>
-        
         <View style={globalStyles.cardContent}>
+          <Image
+            source={userImage}
+            style={{
+              width: 150,
+              height: 150,
+              alignSelf: "center",
+              margin: 10,
+              borderRadius: 100,
+            }}
+          ></Image>
           <View>
             <Text style={globalStyles.titleText}>
               User Name: {details.user_name}
@@ -91,7 +90,7 @@ const Account = ({navigation}) => {
           <Text style={globalStyles.titleText}>Role: {details.role}</Text>
         </View>
         <View style={{ marginTop: 20 }}>
-          <CustomButton text="LOG OUT" onPress = {handleLogOUt} color="#FF6B6B" />
+          <CustomButton text="LOG OUT" onPress={handleLogOUt} />
         </View>
       </View>
     </View>
