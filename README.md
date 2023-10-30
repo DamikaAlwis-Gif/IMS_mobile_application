@@ -30,18 +30,17 @@ To get started with this mobile application, follow these steps:
 
 1. **Clone the Repository**:
    ```
-   hello
+   https://github.com/DamikaAlwis-Gif/IMS_mobile_application.git
    ```
 
 2. **Install Dependencies**:
-   ```sh
-   cd wisdom-education-inventory-app
+   ```
    npm install
    ```
 
 3. **Run the Application**:
-   ```sh
-   npm start
+   ```
+   npx expo start
    ```
 
 4. **Build and Deploy**:
@@ -52,14 +51,14 @@ To get started with this mobile application, follow these steps:
 1. **Login**: After installation, users can log in with their credentials.
 2. **Explore Resources**: Navigate to the "Resources" section to view available resources.
 3. **Resource Details**: Select a resource to view its detailed information.
-4. **Reservations**: Access and manage reservations in the "Reservations" section.
-5. **Checkouts**: Check the status of your checkouts, with overdue items highlighted.
-6. **Account Details**: View and edit your user account details in the "Account" section.
-7. **Log Out**: Log out of the application when finished.
+4. **Reservations**: View your reservations in the "Reservations" section.
+5. **Checkouts**: Check the status of your checkouts, with overdue items highlighted in red color and others in green color.
+6. **Account Details**: View your user account details in the "Account" section.
+7. **Log Out**: Log out of the application.
 
 ## Screenshots
 
-_Insert screenshots of the application here to provide a visual guide to users._
+
 
 
 Happy managing! 📱📚🖥
