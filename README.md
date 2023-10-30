@@ -1,2 +1,2 @@
-# IMS_mobile_application
-The mobile application of the Inventory Management system.
+# The Inventory Managemnet System Mobile Application 
+## The frontend of the mobile application, developed using React Native  
