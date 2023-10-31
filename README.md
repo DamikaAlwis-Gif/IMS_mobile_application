@@ -1,6 +1,6 @@
 # Wisdom Education Inventory Management System Mobile App
 
-Welcome to the Wisdom Education Inventory Management System mobile application repository. This mobile app is designed for general users, including students and academic staff members, to easily manage and access resources available in the computer labs at Wisdom Education Institute. The app is developed using the React Native framework for a seamless cross-platform experience.
+Welcome to the Wisdom Education Inventory Management System mobile application repository. This mobile app is designed for general users, including students and academic staff members, to easily manage and access resources available in the computer labs at Wisdom Education Institute. The app is developed using the React Native framework for a seamless cross-platform experience. This the frontend of the Inventory Management system mobile application.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -43,8 +43,8 @@ To get started with this mobile application, follow these steps:
    npx expo start
    ```
 
-4. **Build and Deploy**:
-   Customize the application for your specific environment and deploy it to your chosen platform.
+4. **You need to start the backend in this application**:
+   
 
 ## Usage
 
